@@ -1,0 +1,44 @@
+Employee Project
+1. Create a new angular project EmployeeManagement
+2. check the project is running ng s -o
+3. add the routing ng generate module app-routing --flat --module=app
+4. Change the title to Employee Management in app.module.ts
+5. Edit the app.component.html to display the title
+6. Create an employee model class in app folder name it as employee.ts
+7. For database we will be using a fake api , which is json-server.
+8. Install json server , npm install -g json-server
+10. In the root of your project create a folder(backenddb) and add a file to it database.json, 
+11. Add some data to the database,json file 
+12. start the json server, json-server --watch .\backendbd\database.json
+13. Your server will start
+14. open the browser and access the url http://localhost:3000/employees to get the data from json file
+15. Create the following components create-employee, update-employee, employee-details, employee-list using, ng g c create-employee
+16. Now we will create a service which will make calls to our API , ng g s employee
+17. Update the employee.service.ts file , inject the httpclient and create a method to get all employees
+18. Register the HttpClientModule in app.module.ts
+19. Update the employee-list component to call the service and employee-list.component.html
+20. Update the app-routing.module.ts
+21. Update app.component.html 
+22. Install Bootstrap npm install bootstrap --save and add it to the styles.css file
+23. Start the app
+--------------------------------------------------------------------------------------------------------------
+Employee Details
+1. Update employee-list.component.ts and add the method  employeeDetails
+2. Update the employee-list.html add a button to display the details
+3. Add getEmployee method in the employee.service.ts
+4. Update the employees-details.component.ts file
+5. Update employee-details.html file
+------------------------------------------------------------------------------------------------------
+Add Employee
+1. create method createEmployee in employee.service.ts
+2. Import the FormsModule in app.module.ts
+3. Update create-employee.component.html and create-employee.component.ts
+----------------------------------------------------------------------------------------
+Update Employee
+1. create method updateEmployee in employee.service.ts
+2. update update-employee.component.ts and update-employee.html
+--------------------------------------------------
+Delete Employee
+1. Add the method deleteEmployee in employee.service.ts
+2. Update the employee-list.component.ts
+
